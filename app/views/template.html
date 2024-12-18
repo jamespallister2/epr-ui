@@ -87,7 +87,15 @@
       {% endblock %}
 
       {% block header %}
-        {{ header({}) }}
+       {{ header({
+    transactionalService: {
+        name: "Service name here",
+        href: "#"
+      },
+      showNav: "false",
+      showSearch: "false"
+    })
+  }}
       {% endblock %}
 
       {% block main %}
