@@ -32,3 +32,66 @@
 {%- from 'tag/macro.njk' import tag %}
 {%- from 'task-list/macro.njk' import taskList %}
 {%- from 'textarea/macro.njk' import textarea %}
+{% from 'back-link/macro.njk' import backLink %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Transactional page template
+{% endblock %}
+
+{% block header %}
+  {{ header({
+    transactionalService: {
+        name: "Service name here",
+        href: "#"
+      },
+      showNav: "false",
+      showSearch: "false"
+    })
+  }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ backLink({
+    href: "#",
+    text: "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1 class="nhsuk-heading-l">
+        Transactional page template
+      </h1>
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  {{ footer({
+    links: [
+      {
+        URL: "#",
+        label: "Accessibility statement"
+      },
+      {
+        URL: "#",
+        label: "Contact us"
+      },
+      {
+        URL: "#",
+        label: "Cookies"
+      },
+      {
+        URL: "#",
+        label: "Privacy policy"
+      },
+      {
+        URL: "#",
+        label: "Terms and conditions"
+      }
+    ]
+  })}}
+{% endblock %}
