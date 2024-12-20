@@ -4,6 +4,11 @@
 /* stylelint-disable string-quotes, order/properties-alphabetical-order */
 /* stylelint-disable indentation */
 /* stylelint-disable color-no-hex */
+
+
+@import "node_modules/govuk-frontend/dist/govuk/index";
+
+
 /* ==========================================================================
    GENERIC / #BOX-SIZING
    ========================================================================== */
