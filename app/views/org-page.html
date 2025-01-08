@@ -1,0 +1,196 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  NHS Digital Onboarding Service - Orgnaisation
+{% endblock %}
+
+{% block header %}
+  {{ header({
+    "transactionalService": {
+        "name": "Digital Onboarding Service",
+        "href": "/"
+      },
+      "showNav": "false",
+      "showSearch": "false"
+    })
+  }}
+
+
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block outerContent %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+        <ol class="nhsuk-breadcrumb__list">
+            <li class="nhsuk-breadcrumb__item"><a data-id="breadcrumbs-home" class="nhsuk-breadcrumb__link" href="index">Home</a></li>
+            <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="index">Organisations</a></li>
+            <li class="nhsuk-breadcrumb__item">UK Health Security Agency</li>
+        </ol>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-width-container">
+
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <div class="nhsuk-page-heading">
+                    <h1>
+                        <span>Elliot Hey Enterprises</span>
+                        <span>
+                        </span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+                <h2>Type: Developer</h2>
+            </div>
+        </div>
+        <div class="nhsuk-grid-row nhsuk-u-margin-bottom-5">
+            <div class="nhsuk-grid-column-full">
+                    <h2>Products:</h2>
+                    <div id="product-table_wrapper" class="dataTables_wrapper no-footer"><table id="product-table" class="nhsuk-table-responsive dataTable no-footer">
+                        <thead class="nhsuk-table__head">
+                            <tr class="nhsuk-table__row"><th class="nhsuk-table__header sorting sorting_asc" tabindex="0" aria-controls="product-table" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Product name: activate to sort column descending" style="width: 205px;">Product name</th><th class="nhsuk-table__header sorting" tabindex="0" aria-controls="product-table" rowspan="1" colspan="1" aria-label="APIs: activate to sort column ascending" style="width: 386.312px;">APIs</th><th class="nhsuk-table__header sorting" tabindex="0" aria-controls="product-table" rowspan="1" colspan="1" aria-label="Date created: activate to sort column ascending" style="width: 142.078px;">Date created</th><th class="nhsuk-table__header sorting" tabindex="0" aria-controls="product-table" rowspan="1" colspan="1" aria-label="Status: activate to sort column ascending" style="width: 98.6094px;">Status</th></tr>
+                        </thead>
+                        <tbody class="nhsuk-table__body">
+                                
+                                
+                                
+                        <tr class="nhsuk-table__row odd">
+                                    <td class="nhsuk-table__cell sorting_1">
+                                        <span class="nhsuk-table-responsive__heading">Product name </span><a href="">Elliott Test 2</a>
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <span class="nhsuk-table-responsive__heading">APIs </span>PDS, NHSL
+                                    </td>
+                                    <td class="nhsuk-table__cell" data-sort="20230605">
+                                        <span class="nhsuk-table-responsive__heading">Date created </span>05/06/2023
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <span class="nhsuk-table-responsive__heading">Status </span>Dormant
+                                    </td>
+                                </tr>
+                                <tr class="nhsuk-table__row even">
+                                    <td class="nhsuk-table__cell sorting_1">
+                                        <span class="nhsuk-table-responsive__heading">Product name </span><a href="">Elliott's playground</a>
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <span class="nhsuk-table-responsive__heading">APIs </span>PDS, SCR, PC AGG docs, PC AGG qnrs
+                                    </td>
+                                    <td class="nhsuk-table__cell" data-sort="20230531">
+                                        <span class="nhsuk-table-responsive__heading">Date created </span>31/05/2023
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <span class="nhsuk-table-responsive__heading">Status </span>In progress
+                                    </td>
+                                </tr>
+                                <tr class="nhsuk-table__row odd">
+                                    <td class="nhsuk-table__cell sorting_1">
+                                        <span class="nhsuk-table-responsive__heading">Product name </span><a href="">Elltiott Test 2</a>
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <span class="nhsuk-table-responsive__heading">APIs </span>PDS, NHSL, NHS APP, Comms Mgr
+                                    </td>
+                                    <td class="nhsuk-table__cell" data-sort="20230726">
+                                        <span class="nhsuk-table-responsive__heading">Date created </span>26/07/2023
+                                    </td>
+                                    <td class="nhsuk-table__cell">
+                                        <span class="nhsuk-table-responsive__heading">Status </span>In progress
+                                    </td>
+                                </tr>
+                            </tbody>
+                    </table>
+                </div>
+
+                    <div class="nhsuk-grid-row nhsuk-u-margin-bottom-5"></div>
+    
+                <h2>Users:</h2>
+                    <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">Assign Assessor/Approver to Organisation</button>
+                    <button class="nhsuk-button nhsuk-button--secondary" hrdata-module="nhsuk-button" type="submit">Add user</button>
+                   
+
+                <table id="user-table" class="nhsuk-table-responsive">
+                    <thead class="nhsuk-table__head">
+                        <tr class="nhsuk-table__row">
+                            <th class="nhsuk-table__header">Name</th>
+                            <th class="nhsuk-table__header">Email</th>
+                            <th class="nhsuk-table__header">Role</th>
+                            <th class="nhsuk-table__header">Date created</th>
+                            <th class="nhsuk-table__header">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="nhsuk-table__body">
+                            <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">
+                                        <span class="nhsuk-table-responsive__heading">Name </span>
+                                        <a href="">Elliott Dev</a>
+                                    </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Email </span>elliott.hey+dev@hippodigital.co.uk
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Role </span>Account Manager
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Date created </span>31/05/2023
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Status </span>Active
+                                </td>
+                            </tr>
+                            <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">
+                                        <span class="nhsuk-table-responsive__heading">Name </span>
+                                        <a href="">Marco Roman</a>
+                                    </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Email </span>elliott.hey+dev2@hippodigital.co.uk
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Role </span>Developer
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Date created </span>05/06/2023
+                                </td>
+                                <td class="nhsuk-table__cell">
+                                    <span class="nhsuk-table-responsive__heading">Status </span>Active
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+                <div class="nhsuk-grid-row nhsuk-u-margin-bottom-9"></div>
+                <form action="confirm-org" method="post">
+                    <button class="nhsuk-button nhsuk-button--secondary" hrdata-module="nhsuk-button" type="submit">Delete organisation</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+<div class="nhsuk-grid-column-full">
+    <h1>Digital Onboarding Service</h1>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MyF8x4-3KVJlqW2Opv3iK5WhvG3OI-opNc8_TMhmvodoMRPFpoRZ0euMOJeQdZC2XC2XlMwIwdp536yMhFnzSc_7Rm-aYw737D25mD4YZ7xd4Iij2h9p5HDkL4k813fUHYECGNXPZ3unxrjhbI6J-6dSrg-wRakq6IMK9Oh17BGISt0wkNsa-04Q0MVDrMY7A">
+    <input data-val="true" data-val-required="The ShowExtendedProductDashboard field is required." id="ShowExtendedProductDashboard" name="ShowExtendedProductDashboard" type="hidden" value="False">
+    <input data-val="true" data-val-required="The ShowOnlyOrganisationUserProducts field is required." id="ShowOnlyOrganisationUserProducts" name="ShowOnlyOrganisationUserProducts" type="hidden" value="False">
+        <p class="nhsuk-body-l">This service enables you to demonstrate that your product and organisation meet the NHS Digital criteria to use our APIs. We call this process ‘onboarding’.</p>
+<p>For selected APIs, this digital onboarding process replaces our current spreadsheet-based onboarding process – often referred to as the ‘<abbr title="Supplier Conformance Assessment List">SCAL</abbr>’.</p>
+<p>Select your product from the list below to access the onboarding process for that product.</p>
+    
+</div>
