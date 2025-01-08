@@ -18,21 +18,21 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1 class="nhsuk-heading-l">
-        Check your answers before sending your application
+        Check your answers before registering your new endpoint
       </h1>
 
       <h2 class="nhsuk-heading-m">
-        Personal details
+       Product details
       </h2>
 
       {{ summaryList({
         rows: [
           {
             key: {
-              text: "NHS number"
+              text: "Product name"
             },
             value: {
-              text: "485 777 3456"
+              text: "Amazing new product"
             },
             actions: {
               items: [
@@ -46,10 +46,10 @@
           },
           {
             key: {
-              text: "Name"
+              text: "Request type"
             },
             value: {
-              text: "Kevin Francis"
+              text: "New end point"
             },
             actions: {
               items: [
@@ -63,10 +63,10 @@
           },
           {
             key: {
-              text: "Date of birth"
+              text: "Date of registration"
             },
             value: {
-              html: "15 March 1984"
+              html: "15 March 2025"
             },
             actions: {
               items: [
@@ -80,7 +80,7 @@
           },
           {
             key: {
-              text: "Home address"
+              text: "Organisation address"
             },
             value: {
               html: '8 Bridgewater Place<br>Leeds<br>LS11 5BZ'
@@ -98,48 +98,7 @@
         ]
       }) }}
 
-      <h2 class="nhsuk-heading-m">
-        Medical details
-      </h2>
-
-      {{ summaryList({
-        rows: [
-          {
-            key: {
-              text: "Allergies"
-            },
-            value: {
-              text: "No allergies"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "allergies"
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: "Conditions"
-            },
-            value: {
-              html: "Asthma <br> Disabilities, including physical and learning disabilities"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: "Change",
-                  visuallyHiddenText: "conditions"
-                }
-              ]
-            }
-          }
-        ]
-      }) }}
+    
 
       <h2 class="nhsuk-heading-m">
         Now send your application
@@ -147,10 +106,6 @@
 
       <p>
         By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
-      </p>
-
-      <p>
-        Your details with be sent to Rose Medical Practice to begin your registration.
       </p>
 
       <a href="/example-templates/confirmation-page" class="nhsuk-button">
