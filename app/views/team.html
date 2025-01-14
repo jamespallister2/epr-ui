@@ -1,0 +1,185 @@
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  Content page template - NHS prototype kit
+{% endblock %}
+
+
+
+
+
+{% block beforeContent %}
+
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "My team(s)"
+    }
+  ]
+  
+}) }}
+
+
+
+
+
+        
+
+<div class="moj-filter-layout">
+
+  <div class="moj-filter-layout__filter">
+
+    
+
+    </div>
+
+    <div class="moj-filter__header-action">
+      
+    </div>
+
+  </div>
+
+  <div class="moj-filter__content">
+
+    
+
+      <div class="moj-filter__selected">
+
+        <div class="moj-filter__selected-heading">
+
+          <div class="moj-filter__heading-title"><br>
+            <h2 class="govuk-heading-m">My team(s)</h2>
+          </div>
+<h3><s>List of products managed under [this team]</s></h3>
+
+  <div class="moj-scrollable-pane">
+    <table class="govuk-table">
+
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+    
+      <th scope="col" class="govuk-table__header">Reference</th>
+    
+      <th scope="col" class="govuk-table__header">Person</th>
+    
+      <th scope="col" class="govuk-table__header">Colour</th>
+    
+      <th scope="col" class="govuk-table__header">Status</th>
+    
+      <th scope="col" class="govuk-table__header">Date of last event</th>
+    
+    </tr>
+  </thead>
+
+  <tbody class="govuk-table__body">
+
+  
+    <tr class="govuk-table__row">
+    
+      
+      
+      <th scope="row" class="govuk-table__header"><a href="#" class="govuk-link">44455453</a></th>
+      
+    
+      
+      
+      <td class="govuk-table__cell">John Smith</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">Blue</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">Complete</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">25 Jan 2018</td>
+      
+    
+    </tr>
+  
+
+  
+    <tr class="govuk-table__row">
+    
+      
+      
+      <th scope="row" class="govuk-table__header"><a href="#" class="govuk-link">12323212</a></th>
+      
+    
+      
+      
+      <td class="govuk-table__cell">Warren Sutton</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">Yellow</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">In progress</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">25 Jan 2018</td>
+      
+    
+    </tr>
+  
+
+  
+    <tr class="govuk-table__row">
+    
+      
+      
+      <th scope="row" class="govuk-table__header"><a href="#" class="govuk-link">45678765</a></th>
+      
+    
+      
+      
+      <td class="govuk-table__cell">Alan Jones</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">Yellow</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">In progress</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">9 May 2018</td>
+      
+    
+    </tr>
+  
+
+  
+
+  </tbody>
+</table>
+</div>
+</div>
+{% endblock %}
