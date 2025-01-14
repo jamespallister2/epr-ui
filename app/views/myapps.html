@@ -1,72 +1,17 @@
-<!DOCTYPE html>
-<head>
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-        
-<script>
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ 'env': 'prod' });
+{% extends 'layout.html' %}
 
-    var userId = '5872';
-    var orgId = '';
-    var productId = '';
-    var userType = '';
-    var userInternalExternal = '';
+{% block pageTitle %}
+  Content page template - NHS prototype kit
+{% endblock %}
 
-    if (userId) {
-        window.dataLayer.push({ 'drmuserid': parseInt(userId) });
-    }
+{% block beforeContent %}
+  {{ breadcrumb({
+    href: "#",
+    text: "Home"
+  }) }}
+{% endblock %}
 
-    if (orgId) {
-        window.dataLayer.push({ 'drmorgid': parseInt(orgId) });
-    }
-
-    if (productId) {
-        window.dataLayer.push({ 'drmproductid': parseInt(productId) });
-    }
-
-    if(userType) {
-        window.dataLayer.push({ 'event': 'usertype', 'usertype': userType });
-    }
-
-    if (userInternalExternal) {
-        window.dataLayer.push({ 'event': 'userinternalexternal', 'userinternalexternal': userInternalExternal });
-    }
-
-</script>
-        <!-- Google Tag Manager -->
-        <script>(function (w, d, s, l, i) {
-                w[l] = w[l] || []; w[l].push({
-                    'gtm.start':
-                        new Date().getTime(), event: 'gtm.js'
-                }); var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', 'GTM-WB9M7NJH');</script>
-        <!-- End Google Tag Manager -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Favicon-->
-    <link rel="shortcut icon" href="/images/favicons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon-180x180.png">
-    <link rel="mask-icon" href="/images/favicons/favicon.svg" color="#005eb8">
-    <link rel="icon" sizes="192x192" href="/images/favicons/favicon-192x192.png">
-    <meta name="msapplication-TileImage" content="images/favicons/mediumtile-144x144.png">
-    <meta name="msapplication-TileColor" content="#005eb8">
-    <meta name="msapplication-square70x70logo" content="images/favicons/smalltile-70x70.png">
-    <meta name="msapplication-square150x150logo" content="images/favicons/mediumtile-150x150.png">
-    <meta name="msapplication-wide310x150logo" content="images/favicons/widetile-310x150.png">
-    <meta name="msapplication-square310x310logo" content="images/favicons/largetile-310x310.png">
-    <title>NHS Digital Onboarding Service - My applications and teams</title>
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css" integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
-    <link href="/main.css" media="screen, print" rel="stylesheet" />
-    <link href="/jquery.dataTables.min.css" rel="stylesheet" />
-
-</head>
-
+{% block content %}
 <body class="">
         <!-- Google Tag Manager (noscript) -->
         <noscript>
