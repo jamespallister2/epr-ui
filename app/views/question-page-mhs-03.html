@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+{% block beforeContent %}
+  
+{% endblock %}
+{% block content %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/product-list">My products</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/product-actions1">Product 1</a></li>
+
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/question-page-mhs">Create a message handling system endpoint</a></li>
+
+  </ol>
+
+
+{{ backLink({
+    "href": "/question-page-mhs-02",
+    "text": "Back"
+  }) }}
+
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="#" method="post" class="form">
+<br>
+   <h1 class="nhsuk-fieldset__heading"><h1>
+        Enter the manufacturer organisation
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>Hint text if needed - should this be select from a list? Need option to add?
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
+<a href="/question-page-mhs-04" button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+          Continue
+        </button>
+
+      </div>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
