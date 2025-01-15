@@ -1,0 +1,127 @@
+{% extends 'layout.html' %}
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+{% block beforeContent %}
+  
+{% endblock %}
+{% block content %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/product-list">My products</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/product-actions2">Product 2</a></li>
+
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/question-page-mhs-one-page">Create a message handling system endpoint</a></li>
+
+  </ol>
+
+
+{{ backLink({
+    "href": "#",
+    "text": "Back"
+  }) }}
+
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+<h1 class="nhsuk-fieldset__heading"><h1>
+<br>New message handling system questionnaire
+
+
+      <form action="#" method="post" class="form">
+<br>
+   <h2 class="nhsuk-fieldset__heading"><h2>
+        Fully qualified domain name (FQDN)
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>(For what exactly? need to clarify?)
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
+        Service description
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>Hint text if needed
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
+
+Manufacturer organisation
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>Hint text if needed - should this be select from a list? Need option to add?
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
+
+
+Product name, if needed
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>This is not a required field
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
+ Product version, if relevant
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>This is not a required field
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
+   Approver PRP
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>what is this acronym?
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
+
+<div>DNS approver
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>Hint text if needed / Choose from drop down would be better? or free text?
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text"></div>
+<div>Requestor universal render pipeline (URP)
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>Hint text if needed
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
+
+</div>
+
+
+<a href="/question-page-mhs-02" button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+          Continue</a>
+        </button>
+
+      </div>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
