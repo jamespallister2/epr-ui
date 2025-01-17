@@ -1,0 +1,129 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Check your answers template - NHS prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ backLink({
+    "href": "#",
+    "text": "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <h1 class="nhsuk-heading-l">BootRunDUR-0038790</h1>
+    <h2 class="nhsuk-heading-m">End point details</h2>
+    <h2 class="nhsuk-heading-m"><br>Product settings</h2>
+    
+    {{ summaryList({
+      rows: [
+        {
+          key: { text: "Product name" },
+          value: { text: "Amazing new product" },
+          actions: { items: [{ visuallyHiddenText: "NHS number" }] }
+        },
+        {
+          key: { text: "Product ID" },
+          value: { text: "PROD0001" },
+          actions: { items: [] }
+        },
+        {
+          key: { text: "Date modified" },
+          value: { html: "15 January 2025" },
+          actions: { items: [] }
+        }
+      ]
+    }) }}
+
+    <h2 class="nhsuk-heading-m">Deployment settings</h2>
+    {{ summaryList({
+      rows: [
+        {
+          key: { text: "Deploying organisation" },
+          value: { text: "NHS X26 Durham" },
+          actions: { items: [] }
+        },
+        {
+          key: { text: "Deploying product name" },
+          value: { text: "Mega product team 4" },
+          actions: { items: [] }
+        }
+      ]
+    }) }}
+
+    <h2 class="nhsuk-heading-m">End point settings</h2>
+    {{ summaryList({
+      rows: [
+        {
+          key: { text: "Manufacturer" },
+          value: { text: "Name of manufacturer" },
+          actions: { items: [{ visuallyHiddenText: "NHS number" }] }
+        },
+        {
+          key: { text: "Source IP" },
+          value: { text: "195.99.97.251" },
+          actions: { items: [] }
+        },
+        {
+          key: { text: "Update DNS?" },
+          value: { html: "No" },
+          actions: { items: [] }
+        },
+        {
+          key: { text: "FQDN" },
+          value: { html: 'emisweb.c88663.nis1.nic.nhs.uk' },
+          actions: { items: [{ visuallyHiddenText: "home address" }] }
+        },
+        {
+          key: { text: "MHS Party key" },
+          value: { html: 'b9cce6b46d1256e52' },
+          actions: { items: [] }
+        },
+        {
+          key: { text: "ASID" },
+          value: { html: 'ASID value here' },
+          actions: { items: [] }
+        },
+        {
+          key: { text: "Date modified" },
+          value: { html: "15 January 2025" },
+          actions: { items: [] }
+        }
+      ]
+    }) }}
+
+    <h2 class="nhsuk-heading-m">Message set settings</h2>
+    {{ summaryList({
+      rows: [
+        {
+          key: { text: "ACS" },
+          actions: { items: [rydydydy] }
+        }
+      ]
+    }) }}
+
+    <h2 class="nhsuk-heading-m">Admin settings</h2>
+    {{ summaryList({
+      rows: [
+        {
+          key: { text: "Requested by" },
+          value: { text: "Edward Paul Raymond" },
+          actions: { items: [{ href: "#", text: "Change", visuallyHiddenText: "name" }] }
+        },
+        {
+          key: { text: "DNS approver" },
+          value: { text: "Dorothy Norma Smith" },
+          actions: { items: [{ href: "#", text: "Change", visuallyHiddenText: "name" }] }
+        }
+      ]
+    }) }}
+
+    <h2 class="nhsuk-heading-m">Delete this end point</h2>
+    <p><s>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</s></p>
+    <a href="/example-templates/confirmation-page" class="nhsuk-button nhsuk-button--warning">Delete this endpoint</a>
+  </div>
+{% endblock %}
