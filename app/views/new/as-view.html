@@ -1,0 +1,198 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Content page template - NHS prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "Level two"
+    }
+  ],
+  href: "#",
+  text: "Level three"
+}) }}
+  <body class="">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    
+          <ul class="nhsuk-header__navigation-list">
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="/modify-endpoint">
+                Modify Endpoint
+                <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="/navigation">
+                Navigation URLs
+                <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    
+  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+      <ol class="nhsuk-breadcrumb__list">
+        <li class="nhsuk-breadcrumb__item">
+          <a class="nhsuk-breadcrumb__link" href="/">Home</a>
+        </li>
+        <li class="nhsuk-breadcrumb__item">Authentication Service Details</li>
+      </ol>
+      <p class="nhsuk-breadcrumb__back">
+        <a class="nhsuk-breadcrumb__backlink" href="/">Back to home</a>
+      </p>
+    </div>
+  </nav>
+
+
+    <div class="nhsuk-width-container">
+      <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+            
+  <h1 class="nhsuk-heading-xl">Authentication Service Details</h1>
+
+  <div class="nhsuk-card">
+    <div class="nhsuk-card__content">
+      <h2 class="nhsuk-card__heading">Service Information</h2>
+      <dl class="nhsuk-summary-list">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            AS ID
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            AS-NHS-001
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Service URL
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            https://auth.nhs.uk/service
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Status
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            <span class="nhsuk-tag nhsuk-tag--green">Active</span>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="nhsuk-card">
+    <div class="nhsuk-card__content">
+      <h2 class="nhsuk-card__heading">Authentication Configuration</h2>
+      <dl class="nhsuk-summary-list">
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Authentication method
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            OAuth 2.0
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Security level
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            High security (NHS spine)
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Certificate expiry
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            31 December 2025
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="nhsuk-card">
+    <div class="nhsuk-card__content">
+      <h2 class="nhsuk-card__heading">Connected Services</h2>
+      <table class="nhsuk-table">
+        <caption class="nhsuk-table__caption">Services using this authentication endpoint</caption>
+        <thead class="nhsuk-table__head">
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table__header" scope="col">Service Name</th>
+            <th class="nhsuk-table__header" scope="col">Type</th>
+            <th class="nhsuk-table__header" scope="col">Last Access</th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">MHS Endpoint</td>
+            <td class="nhsuk-table__cell">Message Handling</td>
+            <td class="nhsuk-table__cell">Today at 09:15</td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">CMA Service</td>
+            <td class="nhsuk-table__cell">Clinical Messaging</td>
+            <td class="nhsuk-table__cell">Today at 08:30</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="nhsuk-button-group">
+    <a href="/new/as-edit" class="nhsuk-button">
+      Modify configuration
+    </a>
+    <a href="/" class="nhsuk-button nhsuk-button--secondary">
+      Return to dashboard
+    </a>
+  </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer role="contentinfo">
+      <div class="nhsuk-footer" id="nhsuk-footer">
+        <div class="nhsuk-width-container">
+          <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+          <ul class="nhsuk-footer__list">
+            <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Accessibility</a></li>
+            <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Contact us</a></li>
+            <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Privacy policy</a></li>
+            <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Terms and conditions</a></li>
+          </ul>
+          <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+        </div>
+      </div>
+    </footer>
+
+    
+  </body>
+</html>{% endblock %}

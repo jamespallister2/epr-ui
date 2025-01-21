@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <title>Superuser Edit Authentication Service - NHS Service</title>
+
+    <link href="https://www.nhs.uk/nhsuk-frontend/nhsuk.css" rel="stylesheet">
+    <script src="https://www.nhs.uk/nhsuk-frontend/nhsuk.min.js" defer></script>
+    <link href="/static/css/custom.css" rel="stylesheet">
+  </head>
+
+  <body class="">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
+
+    <header class="nhsuk-header" role="banner">
+      <div class="nhsuk-width-container nhsuk-header__container">
+        <div class="nhsuk-header__logo">
+          <a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
+            <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16">
+              <path class="nhsuk-logo__background" d="M0 0h40v16H0z"></path>
+              <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="nhsuk-header__content" id="content-header">
+          <div class="nhsuk-header__menu">
+            <button class="nhsuk-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-expanded="false">Menu</button>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+        <div class="nhsuk-width-container">
+          <p class="nhsuk-header__navigation-title">
+            <span id="label-navigation">Menu</span>
+            <button class="nhsuk-header__navigation-close" id="close-menu">
+              <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+              </svg>
+              <span class="nhsuk-u-visually-hidden">Close menu</span>
+            </button>
+          </p>
+
+          <ul class="nhsuk-header__navigation-list">
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="/modify-endpoint">
+                Modify Endpoint
+                <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="nhsuk-header__navigation-item">
+              <a class="nhsuk-header__navigation-link" href="/navigation">
+                Navigation URLs
+                <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    
+  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+      <ol class="nhsuk-breadcrumb__list">
+        <li class="nhsuk-breadcrumb__item">
+          <a class="nhsuk-breadcrumb__link" href="/">Home</a>
+        </li>
+        <li class="nhsuk-breadcrumb__item">
+          <a class="nhsuk-breadcrumb__link" href="/superuser-as-view">Authentication Service Details</a>
+        </li>
+        <li class="nhsuk-breadcrumb__item">Superuser Edit</li>
+      </ol>
+      <p class="nhsuk-breadcrumb__back">
+        <a class="nhsuk-breadcrumb__backlink" href="/superuser-as-view">Back to AS details</a>
+      </p>
+    </div>
+  </nav>
+
+
+    <div class="nhsuk-width-container">
+      <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+            
+  <h1 class="nhsuk-heading-xl">Superuser Edit - Authentication Service Configuration</h1>
+
+  <div class="nhsuk-warning-callout">
+    <h3 class="nhsuk-warning-callout__label">
+      <span role="text">
+        <span class="nhsuk-u-visually-hidden">Important: </span>
+        Superuser access
+      </span>
+    </h3>
+    <p>You are accessing this page with superuser privileges. Changes made here will affect all connected services and bypass normal approval processes.</p>
+  </div>
+
+  <form action="/superuser-as-edit/success" method="post" novalidate>
+    <div class="nhsuk-form-group">
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+          <h2 class="nhsuk-fieldset__heading">
+            Service Information
+          </h2>
+        </legend>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="as-id">
+            AS ID
+          </label>
+          <div class="nhsuk-hint" id="as-id-hint">
+            The unique identifier for this Authentication Service
+          </div>
+          <input class="nhsuk-input nhsuk-input--width-10" id="as-id" name="as-id" type="text" 
+                 value="AS-NHS-001" aria-describedby="as-id-hint">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="service-url">
+            Service URL
+          </label>
+          <div class="nhsuk-hint" id="service-url-hint">
+            The endpoint URL for the Authentication Service
+          </div>
+          <input class="nhsuk-input" id="service-url" name="service-url" type="url" 
+                 value="https://auth.nhs.uk/service" aria-describedby="service-url-hint" required>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="auth-method">
+            Authentication method
+          </label>
+          <select class="nhsuk-select" id="auth-method" name="auth-method">
+            <option value="oauth2" selected>OAuth 2.0</option>
+            <option value="saml">SAML 2.0</option>
+            <option value="token">Token-based</option>
+            <option value="custom">Custom authentication</option>
+          </select>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend">
+              Security level
+            </legend>
+            <div class="nhsuk-radios">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="security-1" name="security-level" 
+                       type="radio" value="high" checked>
+                <label class="nhsuk-label nhsuk-radios__label" for="security-1">
+                  High security (NHS spine)
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="security-2" name="security-level" 
+                       type="radio" value="standard">
+                <label class="nhsuk-label nhsuk-radios__label" for="security-2">
+                  Standard security
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="security-3" name="security-level" 
+                       type="radio" value="custom">
+                <label class="nhsuk-label nhsuk-radios__label" for="security-3">
+                  Custom security configuration
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="certificate">
+            Security certificate
+          </label>
+          <div class="nhsuk-hint" id="certificate-hint">
+            Upload a new security certificate (optional)
+          </div>
+          <input class="nhsuk-file-upload" id="certificate" name="certificate" type="file" 
+                 aria-describedby="certificate-hint">
+        </div>
+
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="override-reason">
+            Override reason
+          </label>
+          <div class="nhsuk-hint" id="override-reason-hint">
+            Provide a reason for making these changes with superuser privileges
+          </div>
+          <textarea class="nhsuk-textarea" id="override-reason" name="override-reason" 
+                    rows="5" aria-describedby="override-reason-hint" required></textarea>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="nhsuk-warning-callout">
+      <h3 class="nhsuk-warning-callout__label">
+        Important
+      </h3>
+      <p>Changes made with superuser privileges:</p>
+      <ul>
+        <li>Take effect immediately</li>
+        <li>Bypass normal approval workflows</li>
+        <li>Are logged for audit purposes</li>
+        <li>May impact all connected services</li>
+      </ul>
+    </div>
+
+    <div class="nhsuk-button-group">
+      <button class="nhsuk-button nhsuk-button--warning" type="submit">
+        Save changes (Superuser)
+      </button>
+
+      <a href="/superuser-as-view" class="nhsuk-button nhsuk-button--secondary">
+        Cancel
+      </a>
+    </div>
+  </form>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer role="contentinfo">
+      <div class="nhsuk-footer" id="nhsuk-footer">
+        <div class="nhsuk-width-container">
+          <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+          <ul class="nhsuk-footer__list">
+            <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Accessibility</a></li>
+            <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Contact us</a></li>
+            <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Privacy policy</a></li>
+            <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Terms and conditions</a></li>
+          </ul>
+          <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+        </div>
+      </div>
+    </footer>
+
+    
+  <script src="/static/js/form-validation.js"></script>
+
+  </body>
+</html>

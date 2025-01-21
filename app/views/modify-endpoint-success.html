@@ -1,0 +1,120 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Content page template - NHS prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "Level two"
+    }
+  ],
+  href: "#",
+  text: "Level three"
+}) }}
+    
+
+    <div class="nhsuk-width-container">
+      <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-two-thirds">
+            
+  <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-bottom-4">
+    <div class="nhsuk-card__content">
+      <h1 class="nhsuk-card__heading nhsuk-card__heading--confirmation">Endpoint updated successfully</h1>
+      <p class="nhsuk-card__description">Your changes have been saved</p>
+    </div>
+  </div>
+
+  <h2 class="nhsuk-heading-m">What happens next</h2>
+  <p>The endpoint changes will take effect immediately. All new requests will use the updated configuration.</p>
+
+  <h2 class="nhsuk-heading-m">Updated endpoint details</h2>
+  <dl class="nhsuk-summary-list">
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+        Endpoint name
+      </dt>
+      <dd class="nhsuk-summary-list__value">
+        EMIS-X14
+      </dd>
+    </div>
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+        Endpoint address
+      </dt>
+      <dd class="nhsuk-summary-list__value">
+        https://api.emis.com/services/v1
+      </dd>
+    </div>
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+        Status
+      </dt>
+      <dd class="nhsuk-summary-list__value">
+        Active
+      </dd>
+    </div>
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+        Service type
+      </dt>
+      <dd class="nhsuk-summary-list__value">
+        Primary care
+      </dd>
+    </div>
+    <div class="nhsuk-summary-list__row">
+      <dt class="nhsuk-summary-list__key">
+        Authentication method
+      </dt>
+      <dd class="nhsuk-summary-list__value">
+        OAuth 2.0
+      </dd>
+    </div>
+  </dl>
+
+  <div class="nhsuk-button-group">
+    <a href="/modify-endpoint" class="nhsuk-button">
+      Modify another endpoint
+    </a>
+
+    <a href="/" class="nhsuk-button nhsuk-button--secondary">
+      Return to dashboard
+    </a>
+  </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer role="contentinfo">
+      <div class="nhsuk-footer" id="nhsuk-footer">
+        <div class="nhsuk-width-container">
+          <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+          <ul class="nhsuk-footer__list">
+            <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Accessibility</a></li>
+            <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Contact us</a></li>
+            <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Privacy policy</a></li>
+            <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="#">Terms and conditions</a></li>
+          </ul>
+          <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+        </div>
+      </div>
+    </footer>
+
+    
+  </body>
+</html>
+{% endblock %}
