@@ -14,7 +14,8 @@
 {% endblock %}
 {% block content %}
 
-
+<body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
@@ -36,7 +37,7 @@
               text: "Fully qualified domain name"
             },
             value: {
-              text: "<p>{{ data['FQDN'] }}</p>"
+              text: "service-name"
             },
             actions: {
               items: [
@@ -50,10 +51,10 @@
           },
           {
             key: {
-              text: "Request type"
+              text: "Service description"
             },
             value: {
-              text: "New end point"
+              text: "service-description"
             },
             actions: {
               items: [
@@ -67,10 +68,10 @@
           },
           {
             key: {
-              text: "Date of registration"
+              text: "Manufacturer organisation"
             },
             value: {
-              html: "15 March 2025"
+              html: "manufacturer-organisation"
             },
             actions: {
               items: [
@@ -84,10 +85,10 @@
           },
           {
             key: {
-              text: "Organisation address"
+              text: "Product name"
             },
             value: {
-              html: '8 Bridgewater Place<br>Leeds<br>LS11 5BZ'
+              html: 'product-name'
             },
             actions: {
               items: [
@@ -101,11 +102,78 @@
           }
         ]
       }) }}
-
-    <p>{{ data['service-name'] }}</p>
- <p>   <input name="first-name" value="{{ data['service-name'] }}"></p>
-
-
+{{ summaryList({
+        rows: [
+          {
+            key: {
+              text: "Product version"
+            },
+            value: {
+              text: "product-version"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "NHS number"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Approver PRP"
+            },
+            value: {
+              text: "approver-prp"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "name"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "DNS approver"
+            },
+            value: {
+              html: "dns-approver"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "date of birth"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: "Requestor universal render pipeline"
+            },
+            value: {
+              html: 'urp-details'
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Change",
+                  visuallyHiddenText: "home address"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
       <h2 class="nhsuk-heading-m">
         Now send your application
       </h2>

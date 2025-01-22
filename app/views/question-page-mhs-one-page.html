@@ -4,6 +4,8 @@
 {% block pageTitle %}
   Question page
 {% endblock %}
+<body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 {% block beforeContent %}
   
 {% endblock %}
@@ -47,11 +49,11 @@
         Service description
           <div class="nhsuk-form-group">
     <label class="nhsuk-label" for="two-thirds">
-    <input name="service-description" value="{{ data['service-description'] }}">
+    <value="{{ data['service-description'] }}">
 <div id="event-name-hint" class="govuk-hint">
     <br>  </div>  
   </label>
-  <input class="nhsuk-input" id="example" name="example" type="text">
+  <input class="nhsuk-input" id="example" name="service-description" type="text">
 </div>
 
 Manufacturer organisation
