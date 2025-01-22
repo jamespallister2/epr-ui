@@ -1,11 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+{% extends 'layout.html' %}
+{% block pageTitle %}
+  Content page template - NHS prototype kit
+{% endblock %}
 
+{% block beforeContent %}
+
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "Level two"
+    }
+  ],
+  href: "#",
+  text: "Level three"
+}) }}
     <title>Select Organisation - NHS Service</title>
 
     <link href="https://www.nhs.uk/nhsuk-frontend/nhsuk.css" rel="stylesheet">
@@ -173,4 +189,4 @@
   <script src="/static/js/form-validation.js"></script>
 
   </body>
-</html>
+</html>{% endblock %}
