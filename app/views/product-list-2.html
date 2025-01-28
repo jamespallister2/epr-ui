@@ -1,0 +1,195 @@
+{% extends 'layout.html' %}
+
+
+{% block pageTitle %}
+  Content page template - NHS prototype kit
+{% endblock %}
+
+
+
+
+
+{% block beforeContent %}
+
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "My products"
+    }
+  ]
+  
+}) }}
+
+
+
+
+
+        
+<div class="nhsuk-grid-row"><br><div class="nhsuk-grid-column-full"><h1>End point registration service</h1>
+<p class="nhsuk-body-l">Select your product from the list to manage existing or create new end points.</p></div>
+<div class="moj-filter-layout">
+
+
+
+  <div class="nhsuk-task-list">
+
+    
+
+    </div>
+
+  
+      
+    </div>
+
+  </div>
+
+  <div class="nhsuk-task-list">
+
+    
+
+      <div class="nhsuk-task-list">
+
+        <div class="nhsuk-task-list">
+
+         <br>
+            <h2 class="govuk-heading-m">My products</h2>
+          </div>
+<p>List of products managed under <a href="/team">[this team]</a></p>
+
+  <div class="nhsuk-task-list">
+    <table class="govuk-table">
+
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+    
+      <th scope="col" class="govuk-table__header">Product name</th>
+    
+      <th scope="col" class="govuk-table__header">Organisation</th>
+    
+      <th scope="col" class="govuk-table__header">Status</th>
+    
+      <th scope="col" class="govuk-table__header">Party key</th>
+    
+      <th scope="col" class="govuk-table__header">Product ID</th>
+      <th scope="col" class="govuk-table__header">Date modified</th>    
+    </tr>
+  </thead>
+
+  <tbody class="govuk-table__body">
+
+  
+    <tr class="govuk-table__row">
+    
+      
+      
+      <th scope="row" class="govuk-table__header"><a href="/product-actions4" class="govuk-link">Mega new product 1</a></th>
+      
+    
+      
+      
+      <td class="govuk-table__cell">NHS mega product team 1</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">LIVE</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">b9cce6b46d1256e52</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">NHSPROD0001</td>
+      
+          <td class="govuk-table__cell">16/01/2025</td>
+
+    </tr>
+  
+
+  
+    <tr class="govuk-table__row">
+    
+      
+      
+      <th scope="row" class="govuk-table__header"><a href="/product-actions2" class="govuk-link">Product 2</a></th>
+      
+    
+      
+      <td class="govuk-table__cell">NHS mega product team 2</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">LIVE</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">b9cce6b46d1256e52</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">NHSPROD0001</td>
+      
+          <td class="govuk-table__cell">12/01/2025</td>
+
+    </tr>
+    
+    </tr>
+  
+
+  
+    <tr class="govuk-table__row">
+    
+      
+      
+      <th scope="row" class="govuk-table__header"><a href="/product-actions3" class="govuk-link">Product 3</a></th>
+      
+    
+      
+      
+        <td class="govuk-table__cell">NHS mega product team 3</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">DRAFT</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">b9cce6b46d1256e52</td>
+      
+    
+      
+      
+      <td class="govuk-table__cell">NHSPROD0001</td>
+      
+          <td class="govuk-table__cell">11/01/2025</td>
+
+    </tr>
+    
+    </tr>
+  
+
+  
+
+  </tbody>
+</table>
+
+    </body>
+</html>
+{% endblock %}
