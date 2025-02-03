@@ -1,0 +1,220 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+Developer account (external) - NHS
+{% endblock %}
+
+{% block header %}
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="country">
+      Pick a country
+    </label>
+  </h1>
+  
+  <div class="autocomplete__wrapper">
+  <select class="govuk-select" id="country" name="country"
+    data-module="autocomplete" data-autoselect="" data-display-menu="" data-min-length="" data-show-all-values="" data-show-no-options-found="">
+    <option value="" selected disabled>Select an option</option>
+    <option value="Austria">Austria</option>
+    <option value="Belgium">Belgium</option>
+    <option value="Bulgaria">Bulgaria</option>
+    <option value="Croatia">Croatia</option>
+    <option value="Republic of Cyprus">Republic of Cyprus</option>
+    <option value="Czech Republic">Czech Republic</option>
+    <option value="Denmark">Denmark</option>
+    <option value="Estonia">Estonia</option>
+    <option value="Finland">Finland</option>
+    <option value="France">France</option>
+    <option value="Germany">Germany</option>
+    <option value="Greece">Greece</option>
+    <option value="Hungary">Hungary</option>
+    <option value="Ireland">Ireland</option>
+    <option value="Italy">Italy</option>
+    <option value="Latvia">Latvia</option>
+    <option value="Lithuania">Lithuania</option>
+    <option value="Luxembourg">Luxembourg</option>
+    <option value="Malta">Malta</option>
+    <option value="Netherlands">Netherlands</option>
+    <option value="Poland">Poland</option>
+    <option value="Portugal">Portugal</option>
+    <option value="Romania">Romania</option>
+    <option value="Slovakia">Slovakia</option>
+    <option value="Slovenia">Slovenia</option>
+    <option value="Spain">Spain</option>
+    <option value="Sweden">Sweden</option>
+  </select>
+</div>
+
+
+
+
+<span class="govuk-caption-l">Case #161351</span>
+<h1 class="govuk-heading-l" id="case-name">James Smith</h1>
+<nav class="x-govuk-secondary-navigation" aria-labelledby="case-name">
+  <ul class="x-govuk-secondary-navigation__list">
+    <li class="x-govuk-secondary-navigation__list-item ">
+      <a class="x-govuk-secondary-navigation__link" href="#">
+        Overview
+      </a>
+    </li>
+    <li class="x-govuk-secondary-navigation__list-item x-govuk-secondary-navigation__list-item--current">
+      <a class="x-govuk-secondary-navigation__link" href="#" aria-current=page>
+        Contact details
+      </a>
+    </li>
+    <li class="x-govuk-secondary-navigation__list-item ">
+      <a class="x-govuk-secondary-navigation__link" href="#">
+        Claims
+      </a>
+    </li>
+    <li class="x-govuk-secondary-navigation__list-item ">
+      <a class="x-govuk-secondary-navigation__link" href="#">
+        Audit log
+      </a>
+    </li>
+  </ul>
+</nav>
+<main class="govuk-main-wrapper" id="main-content" role="main">
+  <h2 class="govuk-heading-m">Contact details</h2>
+</main>
+
+
+
+
+<div class="moj-search">
+
+  <form action="#" method="post">
+
+    <div class="govuk-form-group">
+      <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+        Find a product
+      </label>
+
+      <div id="search-hint" class="govuk-hint moj-search__hint ">
+        You can search by organisation, product name or product ID
+      </div>
+
+      <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+
+    </div>
+
+    <button type="submit" class="govuk-button moj-search__button " data-module="govuk-button" <a href="/myproducts3">
+      Search
+    </button>
+
+  </form>
+</div>
+
+<table class="govuk-table" data-module="moj-sortable-table">
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+
+      <th scope="col" class="govuk-table__header" aria-sort="ascending">Name</th>
+
+      <th scope="col" class="govuk-table__header" aria-sort="none">Elevation</th>
+
+      <th scope="col" class="govuk-table__header" aria-sort="none">Continent</th>
+
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="none">First summit</th>
+
+    </tr>
+  </thead>
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell">Aconcagua</td>
+
+      <td class="govuk-table__cell" data-sort-value="6961">6,961 meters</td>
+
+      <td class="govuk-table__cell">South America</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1897">1897</td>
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell">Denali</td>
+
+      <td class="govuk-table__cell" data-sort-value="6194">6,194 meters</td>
+
+      <td class="govuk-table__cell">North America</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1913">1913</td>
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell">Elbrus</td>
+
+      <td class="govuk-table__cell" data-sort-value="5642">5,642 meters</td>
+
+      <td class="govuk-table__cell">Europe</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1874">1874</td>
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell">Everest</td>
+
+      <td class="govuk-table__cell" data-sort-value="8850">8,850 meters</td>
+
+      <td class="govuk-table__cell">Asia</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1953">1953</td>
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell">Kilimanjaro</td>
+
+      <td class="govuk-table__cell" data-sort-value="5895">5,895 meters</td>
+
+      <td class="govuk-table__cell">Africa</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1889">1889</td>
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell">Puncak Jaya</td>
+
+      <td class="govuk-table__cell" data-sort-value="4884">4,884 meters</td>
+
+      <td class="govuk-table__cell">Australia</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1962">1962</td>
+
+    </tr>
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell">Vinson</td>
+
+      <td class="govuk-table__cell" data-sort-value="4897">4,897 meters</td>
+
+      <td class="govuk-table__cell">Antarctica</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1966">1966</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+
+{% endblock %}

@@ -2,7 +2,7 @@
 
 module.exports = {
   // Service name
-  serviceName: 'Connecting party manager',
+  serviceName: 'Endpoint registration service',
 
   // Port to run nodemon on locally
   port: 2000,
