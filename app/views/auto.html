@@ -3,10 +3,17 @@
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
-Developer account (external) - NHS
+  Check your answers template - NHS prototype kit
 {% endblock %}
 
-{% block header %}
+{% block beforeContent %}
+  {{ backLink({
+    "href": "#",
+    "text": "Back"
+  }) }}
+{% endblock %}
+{% block content %}
+
 
 <div class="govuk-form-group">
   <h1 class="govuk-label-wrapper">
