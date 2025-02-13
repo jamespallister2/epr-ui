@@ -1,0 +1,264 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Content page template - NHS prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "Level two"
+    }
+  ],
+  href: "#",
+  text: "Level three"
+}) }}
+{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check your answers</title>
+    <link href="/nhsuk.css" rel="stylesheet">
+    <script src="/nhsuk.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.GOVUKFrontend.initAll() })</script>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header class="nhsuk-header" role="banner">
+        <div class="nhsuk-width-container nhsuk-header__container">
+            <div class="nhsuk-header__logo nhsuk-header__logo--only">
+                <a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
+                    <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
+                        <path class="nhsuk-logo__background" fill="#005eb8" d="M0 0h40v16H0z"></path>
+                        <path class="nhsuk-logo__text" fill="#fff" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="nhsuk-width-container">
+        <main class="nhsuk-main-wrapper" id="main-content" role="main">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-two-thirds">
+                    <h1 class="nhsuk-heading-xl">Check your endpoint details</h1>
+                    <h2 class="nhsuk-heading-l">Endpoint Party Key: FE995-807115</h2>
+
+                    <!-- Deployment Details -->
+                    <h2 class="nhsuk-heading-m">Deployment Details</h2>
+                    <dl class="nhsuk-summary-list">
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">Organization</dt>
+                            <dd class="nhsuk-summary-list__value">FE995 - BIRMINGHAM CHEMIST</dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> organization</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">Registration Date</dt>
+                            <dd class="nhsuk-summary-list__value">28-Jan-2014 at 14:27</dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> registration date</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+                    <!-- Endpoint Settings -->
+                    <h2 class="nhsuk-heading-m">Endpoint Settings</h2>
+                    <dl class="nhsuk-summary-list">
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">Product</dt>
+                            <dd class="nhsuk-summary-list__value">1PAS v2 - Config 1</dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> product</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">Manufacturer</dt>
+                            <dd class="nhsuk-summary-list__value">8GW29 - IMS MAXIMS PLC</dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> manufacturer</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">ASID</dt>
+                            <dd class="nhsuk-summary-list__value">123456789012</dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> ASID</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">Source IP</dt>
+                            <dd class="nhsuk-summary-list__value">123.45.56.1</dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> source IP</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">FQDN</dt>
+                            <dd class="nhsuk-summary-list__value">de.dsddsd.nhs.uk</dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> FQDN</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+                    <!-- Message Set Details -->
+                    <h2 class="nhsuk-heading-m">Message Set Details</h2>
+
+                    <!-- CAB REFERRER V1 -->
+                    <h3 class="nhsuk-heading-s">CAB REFERRER V1</h3>
+                    <p class="nhsuk-body-s">urn:nhs:names:services:ebs</p>
+                    <dl class="nhsuk-summary-list">
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">Regular Interactions</dt>
+                            <dd class="nhsuk-summary-list__value">
+                                <ul class="nhsuk-list">
+                                    <li>MCCI_IN010000UK01</li>
+                                    <li>PRPA_IN020000UK02</li>
+                                </ul>
+                            </dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> regular interactions</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">AS Interactions</dt>
+                            <dd class="nhsuk-summary-list__value">
+                                <ul class="nhsuk-list">
+                                    <li>QUPA_IN000009UK03</li>
+                                    <li>QUPA_IN000008UK02</li>
+                                    <li>QUQI_IN010000UK14</li>
+                                </ul>
+                            </dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> AS interactions</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+                    <!-- EBXML V1 -->
+                    <h3 class="nhsuk-heading-s">EBXML V1</h3>
+                    <p class="nhsuk-body-s">urn:oasis:names:tc:ebxml-msg:service</p>
+                    <dl class="nhsuk-summary-list">
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">Interactions</dt>
+                            <dd class="nhsuk-summary-list__value">
+                                <ul class="nhsuk-list">
+                                    <li>Acknowledgment</li>
+                                    <li>MessageError</li>
+                                </ul>
+                            </dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> EBXML interactions</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+                    <!-- PDS FOUNDATION V0 LEVEL B -->
+                    <h3 class="nhsuk-heading-s">PDS FOUNDATION V0 LEVEL B</h3>
+                    <p class="nhsuk-body-s">urn:nhs:names:services:ebs</p>
+                    <dl class="nhsuk-summary-list">
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">Regular Interactions</dt>
+                            <dd class="nhsuk-summary-list__value">
+                                <ul class="nhsuk-list">
+                                    <li>PRPA_IN140000UK01</li>
+                                    <li>PRPA_IN150000UK01</li>
+                                    <li>QUPA_IN030000UK02</li>
+                                    <li>QUPA_IN050000UK01</li>
+                                    <li>QUQI_IN010000UK01</li>
+                                </ul>
+                            </dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> regular interactions</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">AS Interactions</dt>
+                            <dd class="nhsuk-summary-list__value">
+                                <ul class="nhsuk-list">
+                                    <li>PRSC_IN040000UK08</li>
+                                    <li>PRSC_IN060000UK06</li>
+                                    <li>PRSC_IN140000UK06</li>
+                                    <li>PRSC_IN150000UK06</li>
+                                    <li>PRSC_IN070000UK08</li>
+                                    <li>PRSC_IN080000UK07</li>
+                                    <li>PRSC_IN050000UK06</li>
+                                    <li>PRSC_IN090000UK09</li>
+                                </ul>
+                            </dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> AS interactions</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+                    <!-- Category Bag Details -->
+                    <h2 class="nhsuk-heading-m">Category Bag Details</h2>
+                    <dl class="nhsuk-summary-list">
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">CategoryBag1</dt>
+                            <dd class="nhsuk-summary-list__value">r1T</dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> CategoryBag1</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="nhsuk-summary-list__row">
+                            <dt class="nhsuk-summary-list__key">CategoryBag2</dt>
+                            <dd class="nhsuk-summary-list__value">1234</dd>
+                            <dd class="nhsuk-summary-list__actions">
+                                <a href="#">
+                                    Change<span class="nhsuk-u-visually-hidden"> CategoryBag2</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    
+</body>
+</html>
+
+{% endblock %}
