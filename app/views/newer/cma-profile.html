@@ -1,0 +1,363 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  {{ backLink({
+    "href": "#",
+    "text": "Back"
+  }) }}
+{% endblock %}
+
+{% block content %}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHS Endpoint Administrator Profile</title>
+    <!-- NHS Frontend -->
+    <link href="https://www.nhs.uk/nhsuk-frontend/nhsuk.css" rel="stylesheet">
+    <script src="https://www.nhs.uk/nhsuk-frontend/nhsuk.js"></script>
+    <!-- Initialize components -->
+    <script>document.addEventListener('DOMContentLoaded', function() { window.GOVUKFrontend.initAll() })</script>
+    <style>
+        /* Custom styles to complement NHS Design System */
+        .profile-section {
+            margin-bottom: 2rem;
+        }
+
+        .experience-item {
+            margin-bottom: 1rem;
+            border-left: 4px solid #005eb8;
+            padding-left: 1rem;
+        }
+
+        .nhsuk-card {
+            box-shadow: 0 4px 0 0 #d8dde0;
+            margin-bottom: 32px;
+            padding: 24px;
+            background-color: #ffffff;
+        }
+
+        .nhsuk-summary-list__key {
+            font-weight: 600;
+            color: #212b32;
+        }
+
+        .nhsuk-summary-list__value {
+            color: #4c6272;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 48.0525em) {
+            .nhsuk-grid-column-two-thirds {
+                padding: 0 16px;
+            }
+            
+            .nhsuk-card {
+                padding: 16px;
+            }
+            
+            .experience-item {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* Accessibility improvements */
+        :focus {
+            outline: 3px solid #ffeb3b;
+            outline-offset: 0;
+            box-shadow: 0 0 0 4px #212b32;
+        }
+
+        /* High contrast mode adjustments */
+        @media (forced-colors: active) {
+            .nhsuk-card {
+                border: 2px solid currentColor;
+            }
+            
+            .experience-item {
+                border-left-color: currentColor;
+            }
+        }
+    </style>
+</head>
+
+
+    <div class="nhsuk-width-container">
+        <main class="nhsuk-main-wrapper" id="main-content" role="main">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-two-thirds">
+                    <h1 class="nhsuk-heading-xl">MHS and AS (CMA) Endpoint Party Key: FE995-807115</h1>
+
+                    <!-- Deployment Details -->
+                    <div class="nhsuk-card">
+                        <div class="nhsuk-card__content">
+                            <h2 class="nhsuk-heading-l">Deployment Details</h2>
+                            <dl class="nhsuk-summary-list">
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__key">Organization</dt>
+                                    <dd class="nhsuk-summary-list__value">FE995 - BIRMINGHAM CHEMIST</dd>
+                                </div>
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__key">Registration Date</dt>
+                                    <dd class="nhsuk-summary-list__value">28-Jan-2014 at 14:27</dd>
+                                </div>
+                            </dl>
+                            <div class="nhsuk-u-margin-top-4">
+                                <button class="nhsuk-button" type="button">
+                                    Modify
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Endpoint Settings -->
+                    <div class="nhsuk-card">
+                        <div class="nhsuk-card__content">
+                            <h2 class="nhsuk-heading-l">Endpoint Settings</h2>
+                            <dl class="nhsuk-summary-list">
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__key">Product</dt>
+                                    <dd class="nhsuk-summary-list__value">1PAS v2 - Config 1</dd>
+                                </div>
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__key">Manufacturer</dt>
+                                    <dd class="nhsuk-summary-list__value">8GW29 - IMS MAXIMS PLC</dd>
+                                </div>
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__key">ASID</dt>
+                                    <dd class="nhsuk-summary-list__value">123456789012</dd>
+                                </div>
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__key">Source IP</dt>
+                                    <dd class="nhsuk-summary-list__value">123.45.56.1</dd>
+                                </div>
+                                <div class="nhsuk-summary-list__row">
+                                    <dt class="nhsuk-summary-list__key">FQDN</dt>
+                                    <dd class="nhsuk-summary-list__value">de.dsddsd.nhs.uk</dd>
+                                </div>
+                            </dl>
+                            <div class="nhsuk-u-margin-top-4">
+                                <button class="nhsuk-button" type="button">
+                                    Modify
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Message Set Details -->
+                    <h2 class="nhsuk-heading-l">Message Set Details</h2>
+
+                    <!-- CAB REFERRER V1 -->
+                    <div class="nhsuk-table-responsive">
+                        <h3 class="nhsuk-heading-m">CAB REFERRER V1</h3>
+                        <p class="nhsuk-body-s">urn:nhs:names:services:ebs</p>
+
+                        <h4 class="nhsuk-heading-s">Regular Interactions</h4>
+                        <table class="nhsuk-table">
+                            <thead class="nhsuk-table__head">
+                                <tr class="nhsuk-table__row">
+                                    <th class="nhsuk-table__header">Interaction</th>
+                                    <th class="nhsuk-table__header">URL</th>
+                                    <th class="nhsuk-table__header">Contract</th>
+                                </tr>
+                            </thead>
+                            <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">MCCI_IN010000UK01</td>
+                                    <td class="nhsuk-table__cell">https://de.dsddsd.nhs.uk/ mymail.somecollege.edu</td>
+                                    <td class="nhsuk-table__cell">Spine 1006</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">PRPA_IN020000UK02</td>
+                                    <td class="nhsuk-table__cell">https://de.dsddsd.nhs.uk/ mymail.somecollege.edu</td>
+                                    <td class="nhsuk-table__cell">Spine 1006</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="nhsuk-heading-s">AS Interactions</h4>
+                        <table class="nhsuk-table">
+                            <thead class="nhsuk-table__head">
+                                <tr class="nhsuk-table__row">
+                                    <th class="nhsuk-table__header">Interaction</th>
+                                </tr>
+                            </thead>
+                            <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">QUPA_IN000009UK03</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">QUPA_IN000008UK02</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">QUQI_IN010000UK14</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- EBXML V1 -->
+                    <div class="nhsuk-table-responsive">
+                        <h3 class="nhsuk-heading-m">EBXML V1</h3>
+                        <p class="nhsuk-body-s">urn:oasis:names:tc:ebxml-msg:service</p>
+                        <table class="nhsuk-table">
+                            <thead class="nhsuk-table__head">
+                                <tr class="nhsuk-table__row">
+                                    <th class="nhsuk-table__header">Interaction</th>
+                                    <th class="nhsuk-table__header">URL</th>
+                                    <th class="nhsuk-table__header">Contract</th>
+                                </tr>
+                            </thead>
+                            <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">Acknowledgment</td>
+                                    <td class="nhsuk-table__cell">https://de.dsddsd.nhs.uk/ mymail.somecollege.edu</td>
+                                    <td class="nhsuk-table__cell">Spine 1006</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">MessageError</td>
+                                    <td class="nhsuk-table__cell">https://de.dsddsd.nhs.uk/ mymail.somecollege.edu</td>
+                                    <td class="nhsuk-table__cell">Spine 1006</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- PDS FOUNDATION V0 LEVEL B -->
+                    <div class="nhsuk-table-responsive">
+                        <h3 class="nhsuk-heading-m">PDS FOUNDATION V0 LEVEL B</h3>
+                        <p class="nhsuk-body-s">urn:nhs:names:services:ebs</p>
+
+                        <h4 class="nhsuk-heading-s">Regular Interactions</h4>
+                        <table class="nhsuk-table">
+                            <thead class="nhsuk-table__head">
+                                <tr class="nhsuk-table__row">
+                                    <th class="nhsuk-table__header">Interaction</th>
+                                    <th class="nhsuk-table__header">URL</th>
+                                    <th class="nhsuk-table__header">Contract</th>
+                                </tr>
+                            </thead>
+                            <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">PRPA_IN140000UK01</td>
+                                    <td class="nhsuk-table__cell">https://de.dsddsd.nhs.uk/ mymail.somecollege.edu</td>
+                                    <td class="nhsuk-table__cell">Spine 1006</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">PRPA_IN150000UK01</td>
+                                    <td class="nhsuk-table__cell">https://de.dsddsd.nhs.uk/ mymail.somecollege.edu</td>
+                                    <td class="nhsuk-table__cell">Spine 1006</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">QUPA_IN030000UK02</td>
+                                    <td class="nhsuk-table__cell">https://de.dsddsd.nhs.uk/ mymail.somecollege.edu</td>
+                                    <td class="nhsuk-table__cell">Spine 1006</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">QUPA_IN050000UK01</td>
+                                    <td class="nhsuk-table__cell">https://de.dsddsd.nhs.uk/ mymail.somecollege.edu</td>
+                                    <td class="nhsuk-table__cell">Spine 1006</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">QUQI_IN010000UK01</td>
+                                    <td class="nhsuk-table__cell">https://de.dsddsd.nhs.uk/ mymail.somecollege.edu</td>
+                                    <td class="nhsuk-table__cell">Spine 1006</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="nhsuk-heading-s">AS Interactions</h4>
+                        <table class="nhsuk-table">
+                            <thead class="nhsuk-table__head">
+                                <tr class="nhsuk-table__row">
+                                    <th class="nhsuk-table__header">Interaction</th>
+                                </tr>
+                            </thead>
+                            <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">PRSC_IN040000UK08</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">PRSC_IN060000UK06</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">PRSC_IN140000UK06</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">PRSC_IN150000UK06</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">PRSC_IN070000UK08</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">PRSC_IN080000UK07</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">PRSC_IN050000UK06</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">PRSC_IN090000UK09</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="nhsuk-u-margin-top-4">
+                        <button class="nhsuk-button" type="button">
+                            Modify Message Sets
+                        </button>
+                    </div>
+
+                    <!-- Category Bag Details -->
+                    <h2 class="nhsuk-heading-l">Category Bag Details</h2>
+                    <div class="nhsuk-table-responsive">
+                        <table class="nhsuk-table">
+                            <thead class="nhsuk-table__head">
+                                <tr class="nhsuk-table__row">
+                                    <th class="nhsuk-table__header">Category Bag Name</th>
+                                    <th class="nhsuk-table__header">Value</th>
+                                </tr>
+                            </thead>
+                            <tbody class="nhsuk-table__body">
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">CategoryBag1</td>
+                                    <td class="nhsuk-table__cell">r1T</td>
+                                </tr>
+                                <tr class="nhsuk-table__row">
+                                    <td class="nhsuk-table__cell">CategoryBag2</td>
+                                    <td class="nhsuk-table__cell">1234</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="nhsuk-u-margin-top-4">
+                        <button class="nhsuk-button" type="button">
+                            Modify Category Bag
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer role="contentinfo">
+        <div class="nhsuk-footer" id="nhsuk-footer">
+            <div class="nhsuk-width-container">
+                <div class="nhsuk-footer__copyright">
+                    &copy; Crown copyright
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+{% endblock %}
