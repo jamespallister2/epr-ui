@@ -1,16 +1,28 @@
 {% extends 'layout.html' %}
 
-{% set mainClasses = "nhsuk-main-wrapper--s" %}
-
 {% block pageTitle %}
-  Question page
+  Content page template - NHS prototype kit
 {% endblock %}
 
 {% block beforeContent %}
-  {{ backLink({
-    "href": "#",
-    "text": "Back"
-  }) }}
+
+
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/index",
+      text: "Home"
+    },
+    {
+      href: "#",
+      text: "Level two"
+    }
+  ],
+  href: "#",
+  text: "Level three"
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -19,7 +31,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NHS Endpoint Administrator Profile</title>
+    <title>NHS Endpoint registration</title>
     <!-- NHS Frontend -->
     <link href="https://www.nhs.uk/nhsuk-frontend/nhsuk.css" rel="stylesheet">
     <script src="https://www.nhs.uk/nhsuk-frontend/nhsuk.js"></script>
