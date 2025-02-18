@@ -1,5 +1,58 @@
 {% extends 'layout.html' %}
-
+{% from 'header/macro.njk' import header %}
+{% block header %}
+{{ nhsukHeader({
+  homepageUrl: "#",
+  serviceName: "Service name",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "#1",
+      text: "Navigation item 1",
+      active: true
+    },
+    {
+      href: "#2",
+      text: "Navigation item 2"
+    },
+    {
+      href: "#3",
+      text: "Navigation item 3"
+    }
+  ]
+}) }}
+{% endblock %}
+{{ header({
+  service: {
+    name: "Endpoint registration"
+  },
+  showNav: "true",
+  showSearch: "false",
+  searchAction: " ",
+  primaryLinks: [
+      {
+        url  : "/requests",
+        label : "Requests"
+      },
+      {
+        url : '/create',
+        label : 'Create an endpoint'
+      },
+      {
+        url  : '/find',
+        label : 'Find an endpoint'
+      },
+      {
+        url  : '/reference',
+        label : 'Reference data'
+      },
+      {
+        url : '/manage',
+        label : 'Manage products'
+      }
+    ]
+  })
+}} 
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
@@ -11,6 +64,7 @@
     "href": "#",
     "text": "Back"
   }) }}
+  
 {% endblock %}
 
 {% block content %}
@@ -29,7 +83,7 @@
         {
           key: { text: "Product ID" },
           value: { text: "PROD0001" },
-          actions: { items: [] }
+          actions: { items: [{ href: "#", text: "Change", visuallyHiddenText: "name" }] }
         },
         {
           key: { text: "Date modified" },
@@ -45,12 +99,12 @@
         {
           key: { text: "Deploying organisation" },
           value: { text: "NHS X26 Durham" },
-          actions: { items: [] }
+          actions: { items: [{ href: "#", text: "Change", visuallyHiddenText: "name" }] }
         },
         {
           key: { text: "Deploying product name" },
           value: { text: "Mega product team 4" },
-          actions: { items: [] }
+          actions: { items: [{ href: "#", text: "Change", visuallyHiddenText: "name" }] }
         }
       ]
     }) }}
@@ -66,27 +120,27 @@
         {
           key: { text: "Source IP" },
           value: { text: "195.99.97.251" },
-          actions: { items: [] }
+          actions: { items: [{ href: "#", text: "Change", visuallyHiddenText: "name" }] }
         },
         {
           key: { text: "Update DNS?" },
           value: { html: "No" },
-          actions: { items: [] }
+          actions: { items: [{ href: "#", text: "Change", visuallyHiddenText: "name" }] }
         },
         {
           key: { text: "FQDN" },
           value: { html: 'emisweb.c88663.nis1.nic.nhs.uk' },
-          actions: { items: [{ visuallyHiddenText: "home address" }] }
+          actions: { items: [{ href: "#", text: "Change", visuallyHiddenText: "name" }] }
         },
         {
           key: { text: "MHS Party key" },
           value: { html: 'b9cce6b46d1256e52' },
-          actions: { items: [] }
+          actions: { items: [{ href: "#", text: "Change", visuallyHiddenText: "name" }] }
         },
         {
           key: { text: "ASID" },
           value: { html: 'ASID value here' },
-          actions: { items: [] }
+          actions: { items: [{ href: "#", text: "Change", visuallyHiddenText: "name" }] }
         },
         {
           key: { text: "Date modified" },
