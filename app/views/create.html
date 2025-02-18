@@ -6,12 +6,7 @@
   Question page
 {% endblock %}
 
-{% block beforeContent %}
-  {{ backLink({
-    "href": "#",
-    "text": "Back"
-  }) }}
-{% endblock %}
+
                     
 <header class="nhsuk-header nhsuk-header--transactional" role="banner">
     <div class="nhsuk-width-container nhsuk-header__container">
@@ -72,6 +67,12 @@ james.pallister2&#x2B;acm@nhs.net                        </li><br>
         
      </div>                  
 </header>
+{% block beforeContent %}
+  {{ backLink({
+    "href": "#",
+    "text": "Back"
+  }) }}
+{% endblock %}
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
