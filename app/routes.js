@@ -12,7 +12,7 @@ router.post('/create-answer', function (req, res) {
 var create = req.session.data.create
 
 // Check whether the variable matches a condition
-if (create == "yes"){
+if (create == "Message handling system (MHS) endpoint request"){
 // Send user to next page
 res.redirect('/question-page-mhs-one-page')
 } else {
