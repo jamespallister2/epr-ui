@@ -1,12 +1,9 @@
 {% extends 'layout.html' %}
-
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
   Question page
-{% endblock %}
-
-
+  
                     
 <header class="nhsuk-header nhsuk-header--transactional" role="banner">
     <div class="nhsuk-width-container nhsuk-header__container">
@@ -67,47 +64,125 @@ james.pallister2&#x2B;acm@nhs.net                        </li><br>
         
      </div>                  
 </header>
+{% endblock %}
+<body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    
 {% block beforeContent %}
-  {{ backLink({
+  
+{% endblock %}
+{% block content %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <ol class="nhsuk-breadcrumb__list">
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/product-list">My products</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/product-actions2">Product 2</a></li>
+
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/question-page-mhs-one-page">Create a message handling system endpoint</a></li>
+
+  </ol>
+
+
+{{ backLink({
     "href": "#",
     "text": "Back"
   }) }}
-{% endblock %}
-{% block content %}
+
+
+
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/create-answer" method="post" class="form">
+<h1 class="nhsuk-fieldset__heading"><h1>
+<br>New message handling system questionnaire
 
-        {{ radios({
-          "idPrefix": "example",
-          "name": "example",
-          "fieldset": {
-            "legend": {
-              "text": "What do you want to setup?",
-              "classes": "nhsuk-fieldset__legend--l",
-              "isPageHeading": true
-            }
-          },
-          "items": [
-            {
-              "value": "MHS",
-              "text": "Message handling system (MHS) endpoint request"
-            },
-            {
-              "value": "AS",
-              "text": "Accredited system (ASID)end point request"
-            }
-          ]
-        }) }}
 
-        {{ button({
-          "text": "Continue",
-          "id": "btn_submit" 
-        }) }}
+      <form action="#" method="post" class="form">
+<br>
+   <h2 class="nhsuk-fieldset__heading"><h2>
+        Fully qualified domain name (FQDN)
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
+        Service description
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+    <value="{{ data['service-description'] }}">
+<div id="event-name-hint" class="govuk-hint">
+    <br>  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="service-description" type="text">
+</div>
 
-https://nhs-epr-ui-13cb23fc87a1.herokuapp.com/question-page-mhs-one-page.html
+Manufacturer organisation
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
 
+
+Product name, if needed
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
+ Product version, if relevant
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
+   Approver PRP
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
+
+<div>DNS approver
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text"></div>
+<div>Requestor universal render pipeline (URP)
+          <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="two-thirds">
+<div id="event-name-hint" class="govuk-hint">
+    <br>
+  </div>  
+  </label>
+  <input class="nhsuk-input" id="example" name="example" type="text">
+</div>
+
+</div>
+
+
+<a href="/check-your-answers-mhs" button class="nhsuk-button" data-module="nhsuk-button" type="submit">
+          Continue</a>
+        </button>
+
+      </div>
       </form>
 
     </div>
