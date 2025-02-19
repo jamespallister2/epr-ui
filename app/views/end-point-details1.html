@@ -1,58 +1,6 @@
 {% extends 'layout.html' %}
-{% from 'header/macro.njk' import header %}
-{% block header %}
-{{ nhsukHeader({
-  homepageUrl: "#",
-  serviceName: "Service name",
-  serviceUrl: "#",
-  navigation: [
-    {
-      href: "#1",
-      text: "Navigation item 1",
-      active: true
-    },
-    {
-      href: "#2",
-      text: "Navigation item 2"
-    },
-    {
-      href: "#3",
-      text: "Navigation item 3"
-    }
-  ]
-}) }}
-{% endblock %}
-{{ header({
-  service: {
-    name: "Endpoint registration"
-  },
-  showNav: "true",
-  showSearch: "false",
-  searchAction: " ",
-  primaryLinks: [
-      {
-        url  : "/requests",
-        label : "Requests"
-      },
-      {
-        url : '/create',
-        label : 'Create an endpoint'
-      },
-      {
-        url  : '/find',
-        label : 'Find an endpoint'
-      },
-      {
-        url  : '/reference',
-        label : 'Reference data'
-      },
-      {
-        url : '/manage',
-        label : 'Manage products'
-      }
-    ]
-  })
-}} 
+
+
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
 
 {% block pageTitle %}
